@@ -1,0 +1,50 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:8
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 2608
+      MYSQL_DATABASE: profesionales_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - backendnet
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS: "-rabbitmq_management load_definitions \"/etc/rabbitmq/definitions.json\""
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+      - ./rabbitmq_definitions.json:/etc/rabbitmq/definitions.json:ro
+    networks:
+      - backendnet
+
+  backend:
+    build:
+      context: C:\Users\jl4ma\OneDrive\Escritorio\SectorSalud\SectorSalud\AppEscritorioSectorSalud\Backend_Sector_Salud
+    container_name: backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+      - rabbitmq
+    networks:
+      - backendnet
+
+volumes:
+  mysql_data:
+  rabbitmq_data:
+
+networks:
+  backendnet:
+    driver: bridge

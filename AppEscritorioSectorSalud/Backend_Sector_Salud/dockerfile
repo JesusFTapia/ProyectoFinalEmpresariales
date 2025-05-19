@@ -1,0 +1,16 @@
+# Dockerfile
+FROM eclipse-temurin:21-jdk-alpine
+
+# Instalar Maven
+RUN apk add --no-cache maven
+
+WORKDIR /app
+
+COPY . /app
+
+RUN mvn clean package -DskipTests
+
+
+EXPOSE 8080
+
+ENTRYPOINT ["java", "-jar", "target/Backend_Sector_Salud-1.0-SNAPSHOT.jar"]
