@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Solicitar Citas"
+        android:textAlignment="center"
+        android:textSize="42sp"
+        android:textColor="@color/black"
+        />
+
+    <EditText
+        android:id="@+id/editTextFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/edit_text_background"
+        android:clickable="true"
+        android:focusable="false"
+        android:hint="Fecha de la cita (dd/mm/yyyy)"
+        android:layout_marginTop="70dp"
+        android:padding="12dp"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:id="@+id/spinnerDoctores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:prompt="@string/selecciona_doctor"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:textSize="16sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRegresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_marginRight="20sp"
+        android:text="Regresar"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/boton_redondito"
+        />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_marginLeft="20sp"
+            android:text="Hacer cita"
+            android:padding="8dp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/boton_redondito"
+            />
+    </LinearLayout>
+</LinearLayout>

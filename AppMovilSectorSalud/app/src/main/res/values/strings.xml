@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AppSectorSalud</string>
+    <string name="title_activity_cita">CitaActivity</string>
+    <string name="title_home">Expedientes</string>
+    <string name="title_dashboard">Citas</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_expediente">ExpedienteActivity</string>
+    <string name="title_activity_notificaciones">NotificacionesActivity</string>
+    <string name="selecciona_doctor">Selecciona doctor</string>
+</resources>

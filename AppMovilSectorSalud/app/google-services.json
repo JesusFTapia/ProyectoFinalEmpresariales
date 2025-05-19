@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "249755463423",
+    "firebase_url": "https://sectorsalud-591c3-default-rtdb.firebaseio.com",
+    "project_id": "sectorsalud-591c3",
+    "storage_bucket": "sectorsalud-591c3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249755463423:android:18ebdbcd6459517f7fe6ca",
+        "android_client_info": {
+          "package_name": "com.example.appsectorsalud"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNoudNHABYjw16vZSsZxM5eY1XaXccFP8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
